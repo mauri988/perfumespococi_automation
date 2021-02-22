@@ -44,28 +44,16 @@ public class InventarioPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void deleteInventarioByCod(String cipl) {
+	public void showInventarioByCod(String cipl) {
 		clickOnElement(inventarioLink);
 		switchToTab();
 		waitUntilClickeable(ciplField, 10);
 
 		typeOnElement(ciplField, cipl);
 		clickOnElement(btnBuscar);
-		waitUntilClickeable(btnEliminar, 10);
-
-		acceptAlert();
-		acceptAlert();
-		acceptAlert();
-
 	}
 
-	public void updateInventarioByCod(String cipl, String[] stockData) {
-		clickOnElement(inventarioLink);
-		switchToTab();
-		waitUntilClickeable(ciplField, 10);
-
-		typeOnElement(ciplField, cipl);
-		clickOnElement(btnBuscar);
+	public void updateInventarioByCod(String[] stockData) {
 		waitUntilClickeable(btnEditar, 10);
 
 		clearOnElement(stockField);
@@ -79,9 +67,15 @@ public class InventarioPage extends BasePage {
 
 		clearOnElement(stock4Field);
 		typeOnElement(stock4Field, stockData[3]);
-		
-		clickOnElement(btnGuardar);
 
+		clickOnElement(btnGuardar);
 	}
 
+	public void deleteInventarioByCod(String cipl) {
+		waitUntilClickeable(btnEliminar, 10);
+
+		acceptAlert();
+		acceptAlert();
+		acceptAlert();
+	}
 }

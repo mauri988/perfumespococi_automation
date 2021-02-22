@@ -2,30 +2,71 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
 
 public class TestsLogin {
-	String url = "http://localhost/perfumespococi/";
-	WebDriver driver;
+	public static String url = "http://localhost/perfumespococi/";
+	private WebDriver driver;
 
 	@BeforeMethod
 	public void setUpDriver() {
 		driver = new FirefoxDriver();
-		driver.manage().window().fullscreen();
+		//driver.manage().window().fullscreen();
 		driver.get(url);
 	}
 
-	@Test
+	@Test(priority = 0)
 	public void testLogin() {
 		String user = "paul";
 		String pwd = "canastos123";
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.doLogin(user, pwd);
-
 		driver.quit();
+
 	}
+
+	@Test(priority = 1)
+	public void testIncorrectPassword() {
+		String user = "paul";
+		String pwd = "auto123";
+
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.doLogin(user, pwd);
+		driver.quit();
+
+	}
+
+	@Test(priority = 2)
+	public void testIncorrectUsername() {
+		String user = "test";
+		String pwd = "canastos123";
+
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.doLogin(user, pwd);
+		driver.quit();
+
+	}
+	
+	@Test(priority = 3)
+	public void testIncorrectCredentials() {
+		String user = "test";
+		String pwd = "auto123";
+
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.doLogin(user, pwd);
+		driver.quit();
+
+	}
+	
+	@AfterTest
+	public void finishTests() {
+		System.out.println("Finished Login Tests");
+	}
+	
+
 }

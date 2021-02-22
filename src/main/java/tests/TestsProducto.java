@@ -6,11 +6,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.InventarioPage;
 import pages.LoginPage;
 import pages.ProductoPage;
 
-public class TestsInventario {
+public class TestsProducto {
 	public static String url = "http://localhost/perfumespococi/";
 	String user = "paul";
 	String pwd = "canastos123";
@@ -24,7 +23,7 @@ public class TestsInventario {
 	}
 
 	@Test(priority = 0)
-	public void createInventarioByCod() {
+	public void addProductoTest() {
 		String codigo = "05028";
 		String nombre = "automation-prod";
 
@@ -37,38 +36,43 @@ public class TestsInventario {
 	}
 
 	@Test(priority = 1)
-	public void updateInventarioByCod() {
+	public void updateProductoTest() {
+		String codigo = "05028";
+
+		String nombre = "automation-prod-updated";
+		String newCodigo = "05028";
 		String cipl = "05028";
-		String stock = "25";
-		String stock2 = "40";
-		String stock3 = "62";
-		String stock4 = "15";
-		String[] stockData = { stock, stock2, stock3, stock4 };
+		String descripcion = "Producto actualizado con selenium";
+		String proveedor = "saint honore";
+		String categoria = "Aguas";
+		String medida = "Kilogramo";
+
+		String[] data = { nombre, newCodigo, cipl, descripcion, proveedor, categoria, medida };
 
 		LoginPage loginPage = new LoginPage(driver);
-		InventarioPage inventarioPage = new InventarioPage(driver);
+		ProductoPage productoPage = new ProductoPage(driver);
 
 		loginPage.doLogin(user, pwd);
-		inventarioPage.showInventarioByCod(cipl);
-		inventarioPage.updateInventarioByCod(stockData);
+		productoPage.showProductoByCod(codigo);
+		productoPage.updateProductoByCod(data);
 		driver.quit();
 	}
 
 	@Test(priority = 2)
-	public void deleteInventarioByCodigo() {
-		String cipl = "05028";
+	public void deleteProductoTest() {
+		String codigo = "05028";
 
 		LoginPage loginPage = new LoginPage(driver);
-		InventarioPage inventarioPage = new InventarioPage(driver);
+		ProductoPage productoPage = new ProductoPage(driver);
 
 		loginPage.doLogin(user, pwd);
-		inventarioPage.showInventarioByCod(cipl);
-		inventarioPage.deleteInventarioByCod(cipl);
+		productoPage.showProductoByCod(codigo);
+		productoPage.deleteProductoByCod(codigo);
 		driver.quit();
 	}
 
 	@AfterTest
 	public void finishTests() {
-		System.out.println("Finished Inventario Tests");
+		System.out.println("Finished Producto Tests");
 	}
 }

@@ -5,6 +5,7 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
@@ -25,10 +26,15 @@ public class BasePage {
 	public void clearOnElement(WebElement element) {
 		element.clear();
 	}
-	
+
 	public void waitUntilClickeable(WebElement element, int sec) {
 		WebDriverWait wait = new WebDriverWait(driver, sec);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+	}
+
+	public void onSelectableElement(WebElement element, String text, int sec) {
+		(new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeClickable(element));
+		(new Select(element)).selectByVisibleText(text);
 	}
 
 	public void switchToTab() {

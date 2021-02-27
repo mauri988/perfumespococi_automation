@@ -9,8 +9,10 @@ public class LoginPage extends BasePage {
 
 	@FindBy(id = "login")
 	WebElement usernameField;
+	
 	@FindBy(id = "password")
 	WebElement passwordField;
+	
 	@FindBy(id = "submit")
 	WebElement btnLogin;
 
@@ -24,6 +26,6 @@ public class LoginPage extends BasePage {
 	public void doLogin(String user, String pwd) {
 		typeOnElement(usernameField, user);
 		typeOnElement(passwordField, pwd);
-		waitUntilClickeable(btnLogin, 10);
+		clickOnElement(btnLogin);
 	}
 }

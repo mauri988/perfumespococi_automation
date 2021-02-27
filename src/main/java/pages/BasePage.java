@@ -14,22 +14,24 @@ public class BasePage {
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 	}
-
+	//Se usa en casos especificos que se ocupe limpiar
+	public void clearOnElement(WebElement element) {
+		element.clear();
+	}
+	
 	public void typeOnElement(WebElement element, String text) {
+		element.clear();
 		element.sendKeys(text);
 	}
 
 	public void clickOnElement(WebElement element) {
-		element.click();
-	}
-
-	public void clearOnElement(WebElement element) {
-		element.clear();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
 
 	public void waitUntilClickeable(WebElement element, int sec) {
 		WebDriverWait wait = new WebDriverWait(driver, sec);
-		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
 	public void onSelectableElement(WebElement element, String text, int sec) {

@@ -47,32 +47,25 @@ public class InventarioPage extends BasePage {
 	public void showInventarioByCod(String cipl) {
 		clickOnElement(inventarioLink);
 		switchToTab();
-		waitUntilClickeable(ciplField, 10);
+		clickOnElement(ciplField);
 
 		typeOnElement(ciplField, cipl);
 		clickOnElement(btnBuscar);
 	}
 
 	public void updateInventarioByCod(String[] stockData) {
-		waitUntilClickeable(btnEditar, 10);
+		clickOnElement(btnEditar);
 
-		clearOnElement(stockField);
 		typeOnElement(stockField, stockData[0]);
-
-		clearOnElement(stock2Field);
 		typeOnElement(stock2Field, stockData[1]);
-
-		clearOnElement(stock3Field);
 		typeOnElement(stock3Field, stockData[2]);
-
-		clearOnElement(stock4Field);
 		typeOnElement(stock4Field, stockData[3]);
 
 		clickOnElement(btnGuardar);
 	}
 
 	public void deleteInventarioByCod(String cipl) {
-		waitUntilClickeable(btnEliminar, 10);
+		clickOnElement(btnEliminar);
 
 		acceptAlert();
 		acceptAlert();

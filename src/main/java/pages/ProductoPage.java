@@ -58,34 +58,28 @@ public class ProductoPage extends BasePage {
 
 	public void createProducto(String codigo, String nombre) {
 		clickOnElement(productoLink);
-		waitUntilClickeable(btnAgregar, 10);
-		waitUntilClickeable(codigoField, 10);
+		clickOnElement(btnAgregar);
+		clickOnElement(codigoField);
+		
 		typeOnElement(codigoField, codigo);
 		typeOnElement(nombreField, nombre);
+		
 		clickOnElement(btnGuardar);
-
 	}
 
 	public void showProductoByCod(String cipl) {
 		clickOnElement(productoLink);
-		waitUntilClickeable(searchField, 10);
+		clickOnElement(searchField);
 		typeOnElement(searchField, cipl);
 		clickOnElement(btnBuscar);
 	}
 
 	public void updateProductoByCod(String[] data) {
-		waitUntilClickeable(btnEditar, 10);
+		clickOnElement(btnEditar);
 
-		clearOnElement(nombreField);
 		typeOnElement(nombreField, data[0]);
-
-		clearOnElement(codigoField);
 		typeOnElement(codigoField, data[1]);
-
-		clearOnElement(ciplField);
 		typeOnElement(ciplField, data[2]);
-
-		clearOnElement(descripcionField);
 		typeOnElement(descripcionField, data[3]);
 
 		onSelectableElement(proveedorField, data[4], 10);
@@ -96,7 +90,7 @@ public class ProductoPage extends BasePage {
 	}
 
 	public void deleteProductoByCod(String cipl) {
-		waitUntilClickeable(btnEliminar, 10);
+		clickOnElement(btnEliminar);
 
 		acceptAlert();
 		acceptAlert();

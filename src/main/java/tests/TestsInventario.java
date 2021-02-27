@@ -1,27 +1,16 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.InventarioPage;
 import pages.LoginPage;
 import pages.ProductoPage;
 
-public class TestsInventario {
-	public static String url = "http://localhost/perfumespococi/";
+public class TestsInventario extends BaseTest{
+
 	String user = "paul";
 	String pwd = "canastos123";
 
-	private WebDriver driver;
-
-	@BeforeMethod
-	public void setUpDriver() {
-		driver = new FirefoxDriver();
-		driver.get(url);
-	}
 
 	@Test(priority = 0)
 	public void createInventarioByCod() {
@@ -33,7 +22,7 @@ public class TestsInventario {
 
 		loginPage.doLogin(user, pwd);
 		productoPage.createProducto(codigo, nombre);
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test(priority = 1)
@@ -51,7 +40,7 @@ public class TestsInventario {
 		loginPage.doLogin(user, pwd);
 		inventarioPage.showInventarioByCod(cipl);
 		inventarioPage.updateInventarioByCod(stockData);
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test(priority = 2)
@@ -64,11 +53,7 @@ public class TestsInventario {
 		loginPage.doLogin(user, pwd);
 		inventarioPage.showInventarioByCod(cipl);
 		inventarioPage.deleteInventarioByCod(cipl);
-		driver.quit();
+		//driver.quit();
 	}
 
-	@AfterTest
-	public void finishTests() {
-		System.out.println("Finished Inventario Tests");
-	}
 }

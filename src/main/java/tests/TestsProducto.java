@@ -1,26 +1,14 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.ProductoPage;
 
-public class TestsProducto {
-	public static String url = "http://localhost/perfumespococi/";
+public class TestsProducto extends BaseTest{
 	String user = "paul";
 	String pwd = "canastos123";
 
-	private WebDriver driver;
-
-	@BeforeMethod
-	public void setUpDriver() {
-		driver = new FirefoxDriver();
-		driver.get(url);
-	}
 
 	@Test(priority = 0)
 	public void addProductoTest() {
@@ -32,7 +20,7 @@ public class TestsProducto {
 
 		loginPage.doLogin(user, pwd);
 		productoPage.createProducto(codigo, nombre);
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test(priority = 1)
@@ -55,7 +43,7 @@ public class TestsProducto {
 		loginPage.doLogin(user, pwd);
 		productoPage.showProductoByCod(codigo);
 		productoPage.updateProductoByCod(data);
-		driver.quit();
+		//driver.quit();
 	}
 
 	@Test(priority = 2)
@@ -68,11 +56,7 @@ public class TestsProducto {
 		loginPage.doLogin(user, pwd);
 		productoPage.showProductoByCod(codigo);
 		productoPage.deleteProductoByCod(codigo);
-		driver.quit();
+		//driver.quit();
 	}
 
-	@AfterTest
-	public void finishTests() {
-		System.out.println("Finished Producto Tests");
-	}
 }

@@ -1,23 +1,10 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
 
-public class TestsLogin {
-	public static String url = "http://localhost/perfumespococi/";
-	private WebDriver driver;
-
-	@BeforeMethod
-	public void setUpDriver() {
-		driver = new FirefoxDriver();
-		//driver.manage().window().fullscreen();
-		driver.get(url);
-	}
+public class TestsLogin extends BaseTest{
 
 	@Test(priority = 0)
 	public void testLogin() {
@@ -62,12 +49,5 @@ public class TestsLogin {
 		//driver.quit();
 
 	}
-	
-	@AfterMethod
-	public void finishTests() {
-		driver.quit();
-		System.out.println("Finished Login Tests");
-	}
-	
 
 }

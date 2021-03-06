@@ -9,10 +9,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-	WebDriver driver;
-
+	
+	protected WebDriver driver;
+	private  WebDriverWait wait;
+	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
+		wait = new WebDriverWait(driver, 10);
 	}
 	//Se usa en casos especificos que se ocupe limpiar
 	public void clearOnElement(WebElement element) {
@@ -25,12 +28,10 @@ public class BasePage {
 	}
 
 	public void clickOnElement(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
 
 	public void waitUntilClickeable(WebElement element, int sec) {
-		WebDriverWait wait = new WebDriverWait(driver, sec);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
@@ -51,12 +52,10 @@ public class BasePage {
 	}
 
 	public void acceptAlert() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.alertIsPresent()).accept();
 	}
 
 	public void dismissAlert() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.alertIsPresent()).dismiss();
 	}
 }

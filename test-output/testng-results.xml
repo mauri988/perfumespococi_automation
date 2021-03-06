@@ -1,137 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-06T13:39:19 CST" name="Default suite" finished-at="2021-03-06T13:40:02 CST" duration-ms="43664">
+  <suite started-at="2021-03-06T14:55:27 CST" name="MySuite" finished-at="2021-03-06T14:55:56 CST" duration-ms="29400">
     <groups>
     </groups>
-    <test started-at="2021-03-06T13:39:19 CST" name="Default test" finished-at="2021-03-06T13:40:02 CST" duration-ms="43664">
+    <test started-at="2021-03-06T14:55:27 CST" name="Testing" finished-at="2021-03-06T14:55:56 CST" duration-ms="29400">
       <class name="tests.TestsInventario">
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:19 CST" name="setUpDriver" finished-at="2021-03-06T13:39:22 CST" duration-ms="3311" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:41 CST" name="setUpDriver" finished-at="2021-03-06T14:55:44 CST" duration-ms="2455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="createInventarioByCod()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:22 CST" name="createInventarioByCod" finished-at="2021-03-06T13:39:24 CST" duration-ms="2120" status="PASS">
+        <test-method signature="createInventarioByCod()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:44 CST" name="createInventarioByCod" finished-at="2021-03-06T14:55:45 CST" duration-ms="1728" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createInventarioByCod -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:24 CST" name="finishTests" finished-at="2021-03-06T13:39:24 CST" duration-ms="513" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:45 CST" name="finishTests" finished-at="2021-03-06T14:55:46 CST" duration-ms="533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:24 CST" name="setUpDriver" finished-at="2021-03-06T13:39:27 CST" duration-ms="2686" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:46 CST" name="setUpDriver" finished-at="2021-03-06T14:55:48 CST" duration-ms="2383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="updateInventarioByCod()[pri:1, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:27 CST" name="updateInventarioByCod" finished-at="2021-03-06T13:39:29 CST" duration-ms="2175" status="PASS">
+        <test-method signature="updateInventarioByCod()[pri:1, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:48 CST" name="updateInventarioByCod" finished-at="2021-03-06T14:55:50 CST" duration-ms="2157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateInventarioByCod -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:29 CST" name="finishTests" finished-at="2021-03-06T13:39:30 CST" duration-ms="559" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:50 CST" name="finishTests" finished-at="2021-03-06T14:55:51 CST" duration-ms="547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:30 CST" name="setUpDriver" finished-at="2021-03-06T13:39:33 CST" duration-ms="2635" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:51 CST" name="setUpDriver" finished-at="2021-03-06T14:55:54 CST" duration-ms="2922" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="deleteInventarioByCodigo()[pri:2, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:33 CST" name="deleteInventarioByCodigo" finished-at="2021-03-06T13:39:34 CST" duration-ms="1818" status="PASS">
+        <test-method signature="deleteInventarioByCodigo()[pri:2, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:54 CST" name="deleteInventarioByCodigo" finished-at="2021-03-06T14:55:56 CST" duration-ms="1779" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteInventarioByCodigo -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsInventario@3738449f]" started-at="2021-03-06T13:39:34 CST" name="finishTests" finished-at="2021-03-06T13:39:35 CST" duration-ms="547" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsInventario@3d1cfad4]" started-at="2021-03-06T14:55:56 CST" name="finishTests" finished-at="2021-03-06T14:55:56 CST" duration-ms="520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
       </class> <!-- tests.TestsInventario -->
-      <class name="tests.TestsProducto">
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:35 CST" name="setUpDriver" finished-at="2021-03-06T13:39:37 CST" duration-ms="2182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpDriver -->
-        <test-method signature="addProductoTest()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:37 CST" name="addProductoTest" finished-at="2021-03-06T13:39:39 CST" duration-ms="1732" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProductoTest -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:39 CST" name="finishTests" finished-at="2021-03-06T13:39:39 CST" duration-ms="553" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:39 CST" name="setUpDriver" finished-at="2021-03-06T13:39:42 CST" duration-ms="2140" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpDriver -->
-        <test-method signature="updateProductoTest()[pri:1, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:42 CST" name="updateProductoTest" finished-at="2021-03-06T13:39:44 CST" duration-ms="2375" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateProductoTest -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:44 CST" name="finishTests" finished-at="2021-03-06T13:39:44 CST" duration-ms="508" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:44 CST" name="setUpDriver" finished-at="2021-03-06T13:39:47 CST" duration-ms="2684" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpDriver -->
-        <test-method signature="deleteProductoTest()[pri:2, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:47 CST" name="deleteProductoTest" finished-at="2021-03-06T13:39:48 CST" duration-ms="1261" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteProductoTest -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsProducto@69e1dd28]" started-at="2021-03-06T13:39:48 CST" name="finishTests" finished-at="2021-03-06T13:39:49 CST" duration-ms="526" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishTests -->
-      </class> <!-- tests.TestsProducto -->
       <class name="tests.TestsLogin">
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:49 CST" name="setUpDriver" finished-at="2021-03-06T13:39:52 CST" duration-ms="2675" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:27 CST" name="setUpDriver" finished-at="2021-03-06T14:55:30 CST" duration-ms="2836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="testLogin()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:52 CST" name="testLogin" finished-at="2021-03-06T13:39:52 CST" duration-ms="525" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:30 CST" name="testLogin" finished-at="2021-03-06T14:55:30 CST" duration-ms="674" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:52 CST" name="finishTests" finished-at="2021-03-06T13:39:53 CST" duration-ms="575" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:30 CST" name="finishTests" finished-at="2021-03-06T14:55:31 CST" duration-ms="559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:53 CST" name="setUpDriver" finished-at="2021-03-06T13:39:55 CST" duration-ms="2177" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:31 CST" name="setUpDriver" finished-at="2021-03-06T14:55:33 CST" duration-ms="2441" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="testIncorrectPassword()[pri:1, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:55 CST" name="testIncorrectPassword" finished-at="2021-03-06T13:39:55 CST" duration-ms="504" status="PASS">
+        <test-method signature="testIncorrectPassword()[pri:1, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:33 CST" name="testIncorrectPassword" finished-at="2021-03-06T14:55:34 CST" duration-ms="494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIncorrectPassword -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:55 CST" name="finishTests" finished-at="2021-03-06T13:39:56 CST" duration-ms="505" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:34 CST" name="finishTests" finished-at="2021-03-06T14:55:34 CST" duration-ms="513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:56 CST" name="setUpDriver" finished-at="2021-03-06T13:39:58 CST" duration-ms="2195" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:34 CST" name="setUpDriver" finished-at="2021-03-06T14:55:37 CST" duration-ms="2411" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="testIncorrectUsername()[pri:2, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:58 CST" name="testIncorrectUsername" finished-at="2021-03-06T13:39:59 CST" duration-ms="506" status="PASS">
+        <test-method signature="testIncorrectUsername()[pri:2, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:37 CST" name="testIncorrectUsername" finished-at="2021-03-06T14:55:37 CST" duration-ms="506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIncorrectUsername -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:59 CST" name="finishTests" finished-at="2021-03-06T13:39:59 CST" duration-ms="491" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:37 CST" name="finishTests" finished-at="2021-03-06T14:55:38 CST" duration-ms="488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:39:59 CST" name="setUpDriver" finished-at="2021-03-06T13:40:01 CST" duration-ms="2168" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:38 CST" name="setUpDriver" finished-at="2021-03-06T14:55:40 CST" duration-ms="2453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="testIncorrectCredentials()[pri:3, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:40:01 CST" name="testIncorrectCredentials" finished-at="2021-03-06T13:40:02 CST" duration-ms="487" status="PASS">
+        <test-method signature="testIncorrectCredentials()[pri:3, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:40 CST" name="testIncorrectCredentials" finished-at="2021-03-06T14:55:41 CST" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIncorrectCredentials -->
-        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@11bd0f3b]" started-at="2021-03-06T13:40:02 CST" name="finishTests" finished-at="2021-03-06T13:40:02 CST" duration-ms="501" status="PASS">
+        <test-method is-config="true" signature="finishTests()[pri:0, instance:tests.TestsLogin@747edf66]" started-at="2021-03-06T14:55:41 CST" name="finishTests" finished-at="2021-03-06T14:55:41 CST" duration-ms="491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishTests -->
       </class> <!-- tests.TestsLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Testing -->
+  </suite> <!-- MySuite -->
 </testng-results>

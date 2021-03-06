@@ -14,7 +14,7 @@ public class BaseTest{
 		String url = "http://localhost/perfumespococi/";
 
 		driver = new FirefoxDriver();
-		//driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		driver.get(url);
 	}
 

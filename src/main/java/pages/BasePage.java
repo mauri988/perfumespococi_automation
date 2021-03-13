@@ -2,6 +2,8 @@ package pages;
 
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +14,7 @@ public class BasePage {
 
 	protected WebDriver driver;
 	private WebDriverWait wait;
+	private static final Logger logger = LogManager.getLogger();
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
@@ -19,43 +22,75 @@ public class BasePage {
 	}
 
 	public void clearOnElement(WebElement element) {
-		element.clear();
+		try {
+			element.clear();
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 
 	public void typeOnElement(WebElement element, String text) {
-		element.clear();
-		element.sendKeys(text);
+		try {
+			element.clear();
+			element.sendKeys(text);
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 
 	public void clickOnElement(WebElement element) {
-		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 
 	public void waitUntilClickeable(WebElement element, int sec) {
-		wait.until(ExpectedConditions.elementToBeClickable(element));
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 
 	public void onSelectableElement(WebElement element, String text, int sec) {
-		(new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeClickable(element));
-		(new Select(element)).selectByVisibleText(text);
+		try {
+			(new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeClickable(element));
+			(new Select(element)).selectByVisibleText(text);
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 
 	public void switchToTab() {
-		String baseTab = driver.getWindowHandle();
-		Set<String> newTab = driver.getWindowHandles();
+		try {
+			String baseTab = driver.getWindowHandle();
+			Set<String> newTab = driver.getWindowHandles();
 
-		for (String handle : newTab) {
-			if (!handle.equals(baseTab)) {
-				driver.switchTo().window(handle);
+			for (String handle : newTab) {
+				if (!handle.equals(baseTab)) {
+					driver.switchTo().window(handle);
+				}
 			}
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
 		}
 	}
 
 	public void acceptAlert() {
-		wait.until(ExpectedConditions.alertIsPresent()).accept();
+		try {
+			wait.until(ExpectedConditions.alertIsPresent()).accept();
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 
 	public void dismissAlert() {
-		wait.until(ExpectedConditions.alertIsPresent()).dismiss();
+		try {
+			wait.until(ExpectedConditions.alertIsPresent()).dismiss();
+		} catch (Exception e) {
+			logger.error("Unable to click on element: " + e);
+		}
 	}
 }

@@ -9,19 +9,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-	
+
 	protected WebDriver driver;
-	private  WebDriverWait wait;
-	
+	private WebDriverWait wait;
+
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 10);
 	}
-	//Se usa en casos especificos que se ocupe limpiar
+
 	public void clearOnElement(WebElement element) {
 		element.clear();
 	}
-	
+
 	public void typeOnElement(WebElement element, String text) {
 		element.clear();
 		element.sendKeys(text);

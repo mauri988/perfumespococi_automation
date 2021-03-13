@@ -6,11 +6,10 @@ import pages.InventarioPage;
 import pages.LoginPage;
 import pages.ProductoPage;
 
-public class TestsInventario extends BaseTest{
+public class TestsInventario extends BaseTest {
 
 	String user = "paul";
 	String pwd = "canastos123";
-
 
 	@Test(priority = 0)
 	public void createInventarioByCod() {
@@ -22,7 +21,6 @@ public class TestsInventario extends BaseTest{
 
 		loginPage.doLogin(user, pwd);
 		productoPage.createProducto(codigo, nombre);
-		//driver.quit();
 	}
 
 	@Test(priority = 1)
@@ -40,7 +38,6 @@ public class TestsInventario extends BaseTest{
 		loginPage.doLogin(user, pwd);
 		inventarioPage.showInventarioByCod(cipl);
 		inventarioPage.updateInventarioByCod(stockData);
-		//driver.quit();
 	}
 
 	@Test(priority = 2)
@@ -53,7 +50,6 @@ public class TestsInventario extends BaseTest{
 		loginPage.doLogin(user, pwd);
 		inventarioPage.showInventarioByCod(cipl);
 		inventarioPage.deleteInventarioByCod(cipl);
-		//driver.quit();
 	}
 
 }

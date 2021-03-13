@@ -9,14 +9,12 @@ public class LoginPage extends BasePage {
 
 	@FindBy(id = "login")
 	WebElement usernameField;
-	
+
 	@FindBy(id = "password")
 	WebElement passwordField;
-	
+
 	@FindBy(id = "submit")
 	WebElement btnLogin;
-
-	WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
 		super(driver);

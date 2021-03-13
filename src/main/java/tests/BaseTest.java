@@ -5,10 +5,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseTest{
+public class BaseTest {
 
 	protected WebDriver driver;
-	
+
 	@BeforeMethod
 	public void setUpDriver() {
 		String url = "http://localhost/perfumespococi/";

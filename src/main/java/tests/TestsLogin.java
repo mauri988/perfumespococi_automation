@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import pages.LoginPage;
 
-public class TestsLogin extends BaseTest{
+public class TestsLogin extends BaseTest {
 
 	@Test(priority = 0)
 	public void testLogin() {
@@ -13,8 +13,6 @@ public class TestsLogin extends BaseTest{
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.doLogin(user, pwd);
-		//driver.quit();
-
 	}
 
 	@Test(priority = 1)
@@ -24,8 +22,6 @@ public class TestsLogin extends BaseTest{
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.doLogin(user, pwd);
-		//driver.quit();
-
 	}
 
 	@Test(priority = 2)
@@ -35,10 +31,8 @@ public class TestsLogin extends BaseTest{
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.doLogin(user, pwd);
-		//driver.quit();
-
 	}
-	
+
 	@Test(priority = 3)
 	public void testIncorrectCredentials() {
 		String user = "test";
@@ -46,8 +40,6 @@ public class TestsLogin extends BaseTest{
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.doLogin(user, pwd);
-		//driver.quit();
-
 	}
 
 }

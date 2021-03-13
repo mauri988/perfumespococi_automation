@@ -36,20 +36,18 @@ public class ProductoPage extends BasePage {
 
 	@FindBy(id = "proveedorid")
 	WebElement proveedorField;
-	
+
 	@FindBy(id = "categoriaid")
 	WebElement categoriaField;
-	
+
 	@FindBy(id = "medida")
 	WebElement medidaField;
-	
+
 	@FindBy(name = "submit")
 	WebElement btnBuscar;
 
 	@FindBy(name = "SubmitButton")
 	WebElement btnGuardar;
-	
-	WebDriver driver;
 
 	public ProductoPage(WebDriver driver) {
 		super(driver);
@@ -60,10 +58,10 @@ public class ProductoPage extends BasePage {
 		clickOnElement(productoLink);
 		clickOnElement(btnAgregar);
 		clickOnElement(codigoField);
-		
+
 		typeOnElement(codigoField, codigo);
 		typeOnElement(nombreField, nombre);
-		
+
 		clickOnElement(btnGuardar);
 	}
 

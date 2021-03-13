@@ -5,10 +5,9 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ProductoPage;
 
-public class TestsProducto extends BaseTest{
+public class TestsProducto extends BaseTest {
 	String user = "paul";
 	String pwd = "canastos123";
-
 
 	@Test(priority = 0)
 	public void addProductoTest() {
@@ -20,7 +19,6 @@ public class TestsProducto extends BaseTest{
 
 		loginPage.doLogin(user, pwd);
 		productoPage.createProducto(codigo, nombre);
-		//driver.quit();
 	}
 
 	@Test(priority = 1)
@@ -43,7 +41,6 @@ public class TestsProducto extends BaseTest{
 		loginPage.doLogin(user, pwd);
 		productoPage.showProductoByCod(codigo);
 		productoPage.updateProductoByCod(data);
-		//driver.quit();
 	}
 
 	@Test(priority = 2)
@@ -56,7 +53,6 @@ public class TestsProducto extends BaseTest{
 		loginPage.doLogin(user, pwd);
 		productoPage.showProductoByCod(codigo);
 		productoPage.deleteProductoByCod(codigo);
-		//driver.quit();
 	}
 
 }

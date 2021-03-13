@@ -37,7 +37,6 @@ public class InventarioPage extends BasePage {
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[2]/div[2]/div[4]/a")
 	WebElement inventarioLink;
 
-
 	public InventarioPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);

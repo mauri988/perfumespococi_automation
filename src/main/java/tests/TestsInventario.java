@@ -36,7 +36,9 @@ public class TestsInventario extends BaseTest {
 		InventarioPage inventarioPage = new InventarioPage(driver);
 
 		loginPage.doLogin(user, pwd);
+
 		inventarioPage.showInventarioByCod(cipl);
+
 		inventarioPage.updateInventarioByCod(stockData);
 	}
 

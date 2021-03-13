@@ -1,0 +1,6 @@
+2021-03-12 22:12:18 ERROR BasePage:53 - Unable to click on element: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2021-03-12 22:49:45 ERROR BasePage:103 - Unable to click on element: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2021-03-12 22:54:48 ERROR BasePage:53 - Unable to click on element: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2021-03-12 22:56:25 ERROR BasePage:102 - Unable to click on element: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2021-03-12 22:58:58 ERROR BasePage:102 - Unable to click on element: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2021-03-12 22:59:50 ERROR BasePage:102 - Unable to click on element: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null

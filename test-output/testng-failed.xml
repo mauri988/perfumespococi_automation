@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TestsLogin">
+      <class name="tests.TestsInventario">
         <methods>
-          <include name="testIncorrectCredentials"/>
-          <include name="testIncorrectUsername"/>
-          <include name="testIncorrectPassword"/>
           <include name="setUpDriver"/>
           <include name="finishTests"/>
+          <include name="updateInventarioByCod"/>
         </methods>
-      </class> <!-- tests.TestsLogin -->
+      </class> <!-- tests.TestsInventario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

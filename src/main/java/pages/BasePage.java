@@ -18,7 +18,7 @@ public class BasePage {
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, 10);
+		wait = new WebDriverWait(driver, 20);
 	}
 
 	public void clearOnElement(WebElement element) {
@@ -46,7 +46,7 @@ public class BasePage {
 		}
 	}
 
-	public void waitUntilClickeable(WebElement element, int sec) {
+	public void waitUntilClickeable(WebElement element) {
 		try {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 		} catch (Exception e) {
@@ -93,4 +93,5 @@ public class BasePage {
 			logger.error("Unable to click on element: " + e);
 		}
 	}
+	
 }

@@ -21,9 +21,10 @@ public class LoginPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void doLogin(String user, String pwd) {
+	public AssertHomePage doLogin(String user, String pwd) {
 		typeOnElement(usernameField, user);
 		typeOnElement(passwordField, pwd);
 		clickOnElement(btnLogin);
+		return new AssertHomePage(driver);
 	}
 }

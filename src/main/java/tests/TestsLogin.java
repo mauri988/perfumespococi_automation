@@ -1,7 +1,9 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pages.AssertHomePage;
 import pages.LoginPage;
 
 public class TestsLogin extends BaseTest {
@@ -21,7 +23,9 @@ public class TestsLogin extends BaseTest {
 		String pwd = "auto123";
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.doLogin(user, pwd);
+		AssertHomePage homePage = loginPage.doLogin(user, pwd);
+
+		Assert.assertTrue(homePage.isDisplayed());
 	}
 
 	@Test(priority = 2)
@@ -30,7 +34,9 @@ public class TestsLogin extends BaseTest {
 		String pwd = "canastos123";
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.doLogin(user, pwd);
+		AssertHomePage homePage = loginPage.doLogin(user, pwd);
+
+		Assert.assertTrue(homePage.isDisplayed());
 	}
 
 	@Test(priority = 3)
@@ -39,7 +45,9 @@ public class TestsLogin extends BaseTest {
 		String pwd = "auto123";
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.doLogin(user, pwd);
+		AssertHomePage homePage = loginPage.doLogin(user, pwd);
+
+		Assert.assertTrue(homePage.isDisplayed());
 	}
 
 }
